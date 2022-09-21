@@ -15,7 +15,7 @@ export const NavbarContainer = styled.div<MenuProps>`
   position: sticky;
   top: 0;
 
-  z-index: 999;
+  z-index: 998;
   padding-right: 5rem;
   padding-left: 5rem;
   background: ${(props) => props.theme['gray-400']};

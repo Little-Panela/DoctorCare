@@ -37,12 +37,18 @@ export function Navbar() {
           to="home"
           spy={true}
           smooth={true}
-          offset={-150}>
+          offset={-150}
+          onClick={changeNavBarState}>
           Início
           <span />
         </ScroolTo>
 
-        <ScroolTo activeClass="activeAbout" to="about" spy={true} smooth={true}>
+        <ScroolTo
+          activeClass="activeAbout"
+          to="about"
+          spy={true}
+          smooth={true}
+          onClick={changeNavBarState}>
           Sobre
           <span />
         </ScroolTo>
@@ -51,7 +57,8 @@ export function Navbar() {
           activeClass="activeService"
           to="about"
           spy={true}
-          smooth={true}>
+          smooth={true}
+          onClick={changeNavBarState}>
           Serviços
           <span />
         </ScroolTo>
@@ -60,7 +67,8 @@ export function Navbar() {
           activeClass="activeDepositions"
           to="about"
           spy={true}
-          smooth={true}>
+          smooth={true}
+          onClick={changeNavBarState}>
           Depoimentos
           <span />
         </ScroolTo>
@@ -72,13 +80,16 @@ export function Navbar() {
           <span>Agendar consulta</span>
         </ButtonAppointment>
       </Menu>
+
       <Hamburger isOpen={isOpen} onClick={changeNavBarState} />
+
       <ButtonAppointment
         className="desktop"
         isOpen={isOpen}
         onClick={changeModalState}>
         <span>Agendar consulta</span>
       </ButtonAppointment>
+
       <CreateAppointmentModal
         isModalOpen={isModalOpen}
         setIsModalOpen={changeModalState}
