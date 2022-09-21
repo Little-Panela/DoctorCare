@@ -171,6 +171,14 @@ export const ButtonAppointment = styled.button<MenuProps>`
 
     &.mobile {
       display: flex;
+      color: ${(props) => props.theme['green-500']};
+      background-color: ${(props) => props.theme.white};
+      border: 1px ${(props) => props.theme.white} solid;
+
+      &:hover {
+        color: ${(props) => props.theme.white};
+        background-color: ${(props) => props.theme['green-500']};
+      }
     }
   }
 `
