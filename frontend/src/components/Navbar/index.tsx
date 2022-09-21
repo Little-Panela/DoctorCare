@@ -2,7 +2,13 @@ import { useState } from 'react'
 
 import { Link as ScroolTo } from 'react-scroll'
 
-import { ButtonLogin, Hamburger, Logo, Menu, NavbarContainer } from './styles'
+import {
+  ButtonAppointment,
+  Hamburger,
+  Logo,
+  Menu,
+  NavbarContainer,
+} from './styles'
 import { CreateAppointmentModal } from '../Modal'
 
 export function Navbar() {
@@ -59,20 +65,20 @@ export function Navbar() {
           <span />
         </ScroolTo>
 
-        <ButtonLogin
+        <ButtonAppointment
           className="mobile"
           isOpen={isOpen}
           onClick={changeModalState}>
           <span>Agendar consulta</span>
-        </ButtonLogin>
+        </ButtonAppointment>
       </Menu>
       <Hamburger isOpen={isOpen} onClick={changeNavBarState} />
-      <ButtonLogin
+      <ButtonAppointment
         className="desktop"
         isOpen={isOpen}
         onClick={changeModalState}>
         <span>Agendar consulta</span>
-      </ButtonLogin>
+      </ButtonAppointment>
       <CreateAppointmentModal
         isModalOpen={isModalOpen}
         setIsModalOpen={changeModalState}

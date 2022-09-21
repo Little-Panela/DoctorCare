@@ -131,7 +131,7 @@ export const Menu = styled.div<MenuProps>`
   }
 `
 
-export const ButtonLogin = styled.button<MenuProps>`
+export const ButtonAppointment = styled.button<MenuProps>`
   display: flex;
   flex-direction: row;
   justify-content: center;
