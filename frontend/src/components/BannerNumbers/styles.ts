@@ -54,6 +54,8 @@ export const BannerContainer = styled.div`
 
   @media (max-width: 1000px) {
     flex-direction: column;
-    /* margin: 2.5rem 1.5rem 0; */
+
+    gap: 3.75rem;
+    padding: 2.5rem 5rem;
   }
 `

@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import Women from '../../assets/homephoto.svg'
+
 export const HomeContainer = styled.main`
   display: flex;
   flex-direction: column;
@@ -68,6 +70,20 @@ export const HomeTextField = styled.div`
     text-align: center;
 
     margin: 2.5rem 1.5rem 0;
+  }
+`
+
+export const WomenPhoto = styled.div`
+  background-image: url(${Women});
+  background-color: ${(props) => props.theme['gray-400']};
+  background-size: cover;
+
+  width: 420px;
+  height: 547px;
+
+  @media (max-width: 900px) {
+    width: 261.64px;
+    height: 340px;
   }
 `
 

@@ -1,8 +1,5 @@
 import { Element } from 'react-scroll'
-import { Skeleton } from '@mui/material'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
 
-import HomePhoto from '../../assets/homephoto.svg'
 import { BannerNumbers } from '../../components/BannerNumbers'
 
 import {
@@ -12,6 +9,7 @@ import {
   HomeWrapper,
   ServicesTextField,
   ServicesWrapper,
+  WomenPhoto,
 } from './styles'
 import { ServicesCard } from '../../components/ServicesCard'
 
@@ -29,18 +27,7 @@ export function Home() {
             </p>
             <Button>Agende sua consulta</Button>
           </HomeTextField>
-          <LazyLoadImage
-            src={HomePhoto}
-            effect="blur"
-            placeholder={
-              <Skeleton
-                animation="wave"
-                variant="rectangular"
-                width="100%"
-                height={585}
-              />
-            }
-          />
+          <WomenPhoto />
         </HomeWrapper>
       </Element>
       <BannerNumbers />
