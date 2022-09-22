@@ -5,6 +5,7 @@ export const BannerContainer = styled.div`
   align-items: center;
   align-self: center;
   gap: 6.25rem;
+  z-index: 997;
 
   width: fit-content;
 
