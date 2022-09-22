@@ -33,7 +33,7 @@ export function Navbar() {
 
       <Menu isOpen={isOpen} onClick={changeNavBarState}>
         <ScroolTo
-          activeClass="activeHome"
+          activeClass="active"
           to="home"
           spy={true}
           smooth={true}
@@ -44,7 +44,20 @@ export function Navbar() {
         </ScroolTo>
 
         <ScroolTo
-          activeClass="activeAbout"
+          activeClass="active"
+          to="service"
+          spy={true}
+          smooth={true}
+          offset={60}
+          onClick={changeNavBarState}
+          // onSetActive={}
+        >
+          Serviços
+          <span />
+        </ScroolTo>
+
+        <ScroolTo
+          activeClass="active"
           to="about"
           spy={true}
           smooth={true}
@@ -54,17 +67,7 @@ export function Navbar() {
         </ScroolTo>
 
         <ScroolTo
-          activeClass="activeService"
-          to="about"
-          spy={true}
-          smooth={true}
-          onClick={changeNavBarState}>
-          Serviços
-          <span />
-        </ScroolTo>
-
-        <ScroolTo
-          activeClass="activeDepositions"
+          activeClass="active"
           to="about"
           spy={true}
           smooth={true}

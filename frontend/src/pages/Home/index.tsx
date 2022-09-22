@@ -31,13 +31,15 @@ export function Home() {
         </HomeWrapper>
       </Element>
       <BannerNumbers />
-      <ServicesWrapper>
-        <ServicesTextField>
-          <strong>SERVIÇOS</strong>
-          <span>Como podemos ajudá-lo a se sentir melhor?</span>
-        </ServicesTextField>
-        <ServicesCard />
-      </ServicesWrapper>
+      <Element name="service">
+        <ServicesWrapper>
+          <ServicesTextField>
+            <strong>SERVIÇOS</strong>
+            <span>Como podemos ajudá-lo a se sentir melhor?</span>
+          </ServicesTextField>
+          <ServicesCard />
+        </ServicesWrapper>
+      </Element>
     </HomeContainer>
   )
 }

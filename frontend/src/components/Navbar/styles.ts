@@ -12,16 +12,19 @@ export const NavbarContainer = styled.div<MenuProps>`
 
   width: 100vw;
   height: 4.6rem;
-  position: sticky;
+  position: fixed;
   top: 0;
 
   z-index: 998;
   padding-right: 5rem;
   padding-left: 5rem;
-  background: ${(props) => props.theme['gray-400']};
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+
+  transition: all 0.2s ease-in;
 
   @media (max-width: 1000px) {
-    background: ${({ isOpen }) => (isOpen ? '#00856F' : '#DCE9E2')};
+    ${({ isOpen }) => (isOpen ? 'background: #00856F' : '')};
   }
 
   @media (max-width: 720px) {
@@ -65,6 +68,14 @@ export const Menu = styled.div<MenuProps>`
   position: relative;
   height: 100%;
 
+  .active {
+    font-weight: bold;
+
+    span {
+      width: 90%;
+    }
+  }
+
   a {
     display: flex;
     flex-direction: column;
@@ -85,24 +96,7 @@ export const Menu = styled.div<MenuProps>`
 
     &:hover {
       font-weight: bold;
-
-      span {
-        width: 80%;
-      }
     }
-
-    /* .activeHome {
-      color: ${(props) => props.theme.white};
-      span {
-        width: 100%;
-      }
-    }
-    .activeAbout {
-      color: ${(props) => props.theme.white};
-      span {
-        width: 100%;
-      }
-    } */
   }
 
   @media (max-width: 1000px) {

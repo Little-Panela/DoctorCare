@@ -17,6 +17,7 @@ export const HomeWrapper = styled.section`
   background: ${(props) => props.theme['gray-400']};
   gap: 3.1rem;
   padding-bottom: 3.43rem;
+  padding-top: 4.6rem;
 
   @media (max-width: 900px) {
     span {
