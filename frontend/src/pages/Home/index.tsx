@@ -1,6 +1,9 @@
+import { useState } from 'react'
 import { Element } from 'react-scroll'
 
 import { BannerNumbers } from '../../components/BannerNumbers'
+import { ServicesCard } from '../../components/ServicesCard'
+import { CreateAppointmentModal } from '../../components/Modal'
 
 import {
   Button,
@@ -11,9 +14,14 @@ import {
   ServicesWrapper,
   WomenPhoto,
 } from './styles'
-import { ServicesCard } from '../../components/ServicesCard'
 
 export function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  function changeModalState() {
+    setIsModalOpen((curr) => !curr)
+  }
+
   return (
     <HomeContainer>
       <Element name="home">
@@ -25,7 +33,11 @@ export function Home() {
               Os médicos da DoctorCare vão além dos sintomas para tratar a causa
               raiz de sua doença e proporcionar uma cura a longo prazo.
             </p>
-            <Button>Agende sua consulta</Button>
+            <Button onClick={changeModalState}>Agende sua consulta</Button>
+            <CreateAppointmentModal
+              isModalOpen={isModalOpen}
+              setIsModalOpen={changeModalState}
+            />
           </HomeTextField>
           <WomenPhoto />
         </HomeWrapper>

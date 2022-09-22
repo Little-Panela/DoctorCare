@@ -49,9 +49,7 @@ export function Navbar() {
           spy={true}
           smooth={true}
           offset={60}
-          onClick={changeNavBarState}
-          // onSetActive={}
-        >
+          onClick={changeNavBarState}>
           Serviços
           <span />
         </ScroolTo>
