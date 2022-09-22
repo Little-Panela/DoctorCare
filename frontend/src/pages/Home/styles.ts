@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
-export const HomeContainer = styled.div`
+export const HomeContainer = styled.main`
   display: flex;
   flex-direction: column;
 
   background-color: ${(props) => props.theme['gray-300']};
 `
-export const HomeWrapper = styled.div`
+export const HomeWrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -17,9 +17,14 @@ export const HomeWrapper = styled.div`
   padding-bottom: 3.43rem;
 
   @media (max-width: 900px) {
-    img {
-      width: 261.64px;
-      height: 342px;
+    span {
+      width: fit-content;
+      overflow: hidden;
+
+      img {
+        width: 261.64px;
+        height: 340px;
+      }
     }
   }
 `
@@ -82,5 +87,46 @@ export const Button = styled.button`
 
   &:hover {
     background-color: ${(props) => props.theme['green-700']};
+  }
+`
+
+export const ServicesWrapper = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+
+  padding: 10rem 7.625rem;
+
+  @media (max-width: 900px) {
+    gap: 3.75rem;
+    padding: 10rem 1.9rem;
+  }
+`
+export const ServicesTextField = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  text-align: center;
+
+  strong {
+    font-size: 14px;
+
+    color: ${(props) => props.theme['green-500']};
+  }
+
+  span {
+    max-width: 19ch;
+
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 3.25rem;
+    color: ${(props) => props.theme['gray-900']};
+
+    @media (max-width: 900px) {
+      font-size: 1.875rem;
+    }
   }
 `
