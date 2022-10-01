@@ -10,12 +10,12 @@ export const GlobalStyle = createGlobalStyle`
 
   :focus {
     outline: 0;
-    box-shadow: 0 0 0 2px ${(props) => props.theme['green-500']};
+    //box-shadow: 0 0 0 2px ${(props) => props.theme['green-500']};
    }
 
   body {
-    background-color: ${(props) => props.theme['gray-900']};
-    color: ${(props) => props.theme['gray-300']};
+    background-color: ${(props) => props.theme['gray-300']};
+    color: ${(props) => props.theme['gray-500']};
 
     overflow: auto;
     -webkit-font-smoothing: antialiased;
@@ -24,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body, input, textarea, button {
-    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400;
     font-size: 1rem;
   }
