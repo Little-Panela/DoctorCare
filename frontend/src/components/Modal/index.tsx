@@ -3,6 +3,7 @@ import { PaperPlaneRight } from 'phosphor-react'
 import { useState } from 'react'
 import { ModalContainer, Title } from './styles'
 import LoadingButton from '@mui/lab/LoadingButton'
+import { api } from '../../services/api'
 interface ModalProps {
   isModalOpen: boolean
   setIsModalOpen: () => void
@@ -26,22 +27,72 @@ export function CreateAppointmentModal({
 }: ModalProps) {
   const [loading, setLoading] = useState(false)
 
-  const [UserName, setUserName] = useState('')
+  const [userName, setUserName] = useState('')
   const [errorNameMessage, setErrorNameMessage] = useState('')
 
-  const [UserNumber, setUserNumber] = useState('')
+  const [userNumber, setUserNumber] = useState('')
   const [errorNumberMessage, setErrorNumberMessage] = useState('')
+
+  const [medic, setMedic] = useState('')
+  const [errorMedic, setErrorMedic] = useState('')
 
   const [UserMessage, setUserMessage] = useState('')
   const [errorMessage, setErrorMessage] = useState('')
 
-  function handleClick() {
+  async function handleSubmitForm() {
     setLoading(true)
+    setErrorNameMessage('')
+    setErrorNumberMessage('')
+    setErrorMedic('')
+    setErrorMessage('')
+
+    if (userName.length === 0) {
+      setErrorNameMessage('Digite alguma coisa')
+      setLoading(false)
+
+      return
+    }
+
+    if (userNumber.length === 0) {
+      setErrorNumberMessage('Digite alguma coisa')
+      setLoading(false)
+
+      return
+    }
+
+    if (medic.length === 0) {
+      setErrorMedic('Digite alguma coisa')
+      setLoading(false)
+
+      return
+    }
+
+    if (UserMessage.length === 0) {
+      setErrorMessage('Digite alguma coisa')
+      setLoading(false)
+
+      return
+    }
+
+    try {
+      await api.post(`/addPacient`, {
+        name: userName,
+        consulta: medic,
+        numero: userNumber,
+        comentario: UserMessage,
+      })
+
+      setLoading(false)
+      alert('Agendamento enviado com sucesso')
+    } catch (err) {
+      setLoading(false)
+      alert('erro ao criar o Agendamento!')
+    }
   }
+
   return (
     <Modal open={isModalOpen} onClose={setIsModalOpen}>
       <Box sx={style} component="form">
-        {/* <Alert severity="success">Agendamento enviado com sucesso</Alert> */}
         <ModalContainer>
           <Title>Agendar Consulta</Title>
           <TextField
@@ -52,7 +103,7 @@ export function CreateAppointmentModal({
             disabled={loading}
             error={errorNameMessage.length > 0}
             helperText={errorNameMessage.length > 0 ? errorNameMessage : ' '}
-            value={UserName}
+            value={userName}
             onChange={({ target }) => setUserName(target.value)}
           />
           <TextField
@@ -66,8 +117,19 @@ export function CreateAppointmentModal({
             helperText={
               errorNumberMessage.length > 0 ? errorNumberMessage : ' '
             }
-            value={UserNumber}
+            value={userNumber}
             onChange={({ target }) => setUserNumber(target.value)}
+          />
+          <TextField
+            fullWidth
+            required
+            label="Com quem você deseja ser consultado"
+            variant="outlined"
+            disabled={loading}
+            error={errorMedic.length > 0}
+            helperText={errorMedic.length > 0 ? errorMedic : ' '}
+            value={medic}
+            onChange={({ target }) => setMedic(target.value)}
           />
           <TextField
             fullWidth
@@ -82,7 +144,7 @@ export function CreateAppointmentModal({
             onChange={({ target }) => setUserMessage(target.value)}
           />
           <LoadingButton
-            onClick={handleClick}
+            onClick={handleSubmitForm}
             endIcon={<PaperPlaneRight />}
             loading={loading}
             loadingPosition="end"
