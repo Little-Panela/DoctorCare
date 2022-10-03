@@ -41,10 +41,6 @@ export function CreateAppointmentModal({
 
   async function handleSubmitForm() {
     setLoading(true)
-    setErrorNameMessage('')
-    setErrorNumberMessage('')
-    setErrorMedic('')
-    setErrorMessage('')
 
     if (userName.length === 0) {
       setErrorNameMessage('Digite alguma coisa')
@@ -82,12 +78,20 @@ export function CreateAppointmentModal({
         comentario: UserMessage,
       })
 
-      setLoading(false)
       alert('Agendamento enviado com sucesso')
     } catch (err) {
-      setLoading(false)
       alert('erro ao criar o Agendamento!')
     }
+
+    setLoading(false)
+    setUserName('')
+    setErrorNameMessage('')
+    setUserNumber('')
+    setErrorNumberMessage('')
+    setMedic('')
+    setErrorMedic('')
+    setUserMessage('')
+    setErrorMessage('')
   }
 
   return (

@@ -1,0 +1,40 @@
+.cardContainer {
+  display: flex;
+  padding: 1rem;
+  background-color: #262626;
+  border: 1px solid #333333;
+  border-radius: .5rem;
+  gap: .75rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+
+  min-height: 4.5rem;
+  min-width: 46rem;
+}
+
+.cardContainer + .cardContainer {
+  margin-top: .75rem;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper > p {
+  max-width: 60ch;
+  word-wrap: break-word;
+  color: white;
+}
+
+.cardContainer button {
+  background: transparent;
+  border: none;
+  color: #808080;
+}
+
+.cardContainer[data-done="true"] {
+  color: #808080;
+  text-decoration-line: line-through;
+}
