@@ -2,6 +2,11 @@ import styled from 'styled-components'
 
 import Women from '../../assets/homephoto.svg'
 
+import brotherSorrindo from '../../assets/brotherSorrindo.svg'
+
+import medico from '../../assets/medico.svg'
+import { style } from '@mui/system'
+
 export const HomeContainer = styled.main`
   display: flex;
   flex-direction: column;
@@ -129,7 +134,7 @@ export const ServicesTextField = styled.div`
   text-align: center;
 
   strong {
-    font-size: 14px;
+    font-size: 0.87rem;
 
     color: ${(props) => props.theme['green-500']};
   }
@@ -147,3 +152,98 @@ export const ServicesTextField = styled.div`
     }
   }
 `
+export const AboutUsWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${(props) => props.theme['gray-100']};
+  padding: 10rem 7.6rem;
+  gap: 4.1rem;
+`
+export const AboutUsTextField = styled.div`
+  strong {
+    font-size: 0.87rem;
+
+    color: ${(props) => props.theme['green-500']};
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 15ch;
+  }
+
+  p {
+    font-size: 1rem;
+    max-width: 50ch;
+  }
+`
+export const DoctorSeuZupa = styled.div`
+  background-image: url(${medico});
+  background-color: ${(props) => props.theme['gray-400']};
+  background-size: cover;
+
+  width: 480px;
+  height: 414px;
+
+  @media (max-width: 900px) {
+    width: 261.64px;
+    height: 340px;
+  }
+`
+export const ContactWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${(props) => props.theme.white};
+  padding: 10rem 7.6rem;
+  gap: 4.1rem;
+`
+export const ContactTextField = styled.div`
+  display: flex;
+  flex-direction: column;
+  //padding: 10px;
+  strong {
+    font-size: 0.87rem;
+    color: ${(props) => props.theme['green-500']};
+  }
+  div {
+    flex-direction: column;
+  }
+
+  span {
+    gap: 1.5rem;
+  }
+`
+
+export const ContactPic = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  gap: 1rem;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 0.5rem;
+  }
+`
+
+export const NeyBoyHexa = styled.div`
+  background-image: url(${brotherSorrindo});
+  background-color: ${(props) => props.theme.white};
+  background-size: cover;
+
+  width: 575px;
+  height: 379px;
+
+  @media (max-width: 900px) {
+    width: 261.64px;
+    height: 340px;
+  }
+`
+export const ButtonContact = styled.div``

@@ -13,7 +13,16 @@ import {
   ServicesTextField,
   ServicesWrapper,
   WomenPhoto,
+  AboutUsWrapper,
+  AboutUsTextField,
+  DoctorSeuZupa,
+  ContactWrapper,
+  ContactTextField,
+  ContactPic,
+  NeyBoyHexa,
+  ButtonContact,
 } from './styles'
+import { Envelope, MapPin } from 'phosphor-react'
 
 export function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -52,6 +61,43 @@ export function Home() {
           <ServicesCard />
         </ServicesWrapper>
       </Element>
+      <AboutUsWrapper>
+        <DoctorSeuZupa />
+        <AboutUsTextField>
+          <strong>SOBRE NÓS</strong>
+          <h1>Entenda quem somos e por que existimos</h1>
+          <p>
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim. Amet minim mollit non
+            deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+            consequat duis enim. Amet minim mollit non deserunt ullamco est sit
+            aliqua dolor do amet sint. Velit officia consequat duis enim. Amet
+            minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+            Velit officia consequat duis enim. Amet minim mollit non deserunt
+            ullamco est sit aliqua dolor do amet sint.
+          </p>
+        </AboutUsTextField>
+      </AboutUsWrapper>
+      <ContactWrapper>
+        <ContactTextField>
+          <strong>CONTATO</strong>
+          <h1>Entre em contato com a gente!</h1>
+          <ContactPic>
+            <div>
+              <MapPin size={24} color="#00856F" />
+              <p>Av. Alcindo Cacela, 1523</p>
+            </div>
+            <div>
+              <Envelope size={24} color="#00856F" />
+              <p>contato@doctorcare.com</p>
+            </div>
+          </ContactPic>
+          <ButtonContact>
+            <Button onClick={changeModalState}>Agende sua consulta</Button>
+          </ButtonContact>
+        </ContactTextField>
+        <NeyBoyHexa />
+      </ContactWrapper>
     </HomeContainer>
   )
 }
