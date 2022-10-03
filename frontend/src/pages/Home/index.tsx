@@ -62,49 +62,47 @@ export function Home() {
         </ServicesWrapper>
       </Element>
 
-
       <Element name="about">
-      <AboutUsWrapper>
-      
-        <DoctorSeuZupa />
-        <AboutUsTextField>
-          <strong>SOBRE NÓS</strong>
-          <h1>Entenda quem somos e por que existimos</h1>
-          <p>
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim. Amet minim mollit non
-            deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-            consequat duis enim. Amet minim mollit non deserunt ullamco est sit
-            aliqua dolor do amet sint. Velit officia consequat duis enim. Amet
-            minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-            Velit officia consequat duis enim. Amet minim mollit non deserunt
-            ullamco est sit aliqua dolor do amet sint.
-          </p>
-        </AboutUsTextField>
-      </AboutUsWrapper>
+        <AboutUsWrapper>
+          <DoctorSeuZupa />
+          <AboutUsTextField>
+            <strong>SOBRE NÓS</strong>
+            <h1>Entenda quem somos e por que existimos</h1>
+            <p>
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim. Amet minim mollit
+              non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+              officia consequat duis enim. Amet minim mollit non deserunt
+              ullamco est sit aliqua dolor do amet sint. Velit officia consequat
+              duis enim. Amet minim mollit non deserunt ullamco est sit aliqua
+              dolor do amet sint. Velit officia consequat duis enim. Amet minim
+              mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+            </p>
+          </AboutUsTextField>
+        </AboutUsWrapper>
       </Element>
-    
-       <Element name="contact">
-      <ContactWrapper>
-        <ContactTextField>
-          <strong>CONTATO</strong>
-          <h1>Entre em contato com a gente!</h1>
-          <ContactPic>
-            <div>
-              <MapPin size={24} color="#00856F" />
-              <p>Av. Alcindo Cacela, 1523</p>
-            </div>
-            <div>
-              <Envelope size={24} color="#00856F" />
-              <p>contato@doctorcare.com</p>
-            </div>
-          </ContactPic>
-          <ButtonContact>
-            <Button onClick={changeModalState}>Agende sua consulta</Button>
-          </ButtonContact>
-        </ContactTextField>
-        <NeyBoyHexa />
-      </ContactWrapper>
+
+      <Element name="contact">
+        <ContactWrapper>
+          <ContactTextField>
+            <strong>CONTATO</strong>
+            <h1>Entre em contato com a gente!</h1>
+            <ContactPic>
+              <div>
+                <MapPin size={24} color="#00856F" />
+                <p>Av. Alcindo Cacela, 1523</p>
+              </div>
+              <div>
+                <Envelope size={24} color="#00856F" />
+                <p>contato@doctorcare.com</p>
+              </div>
+            </ContactPic>
+            <ButtonContact>
+              <Button onClick={changeModalState}>Agende sua consulta</Button>
+            </ButtonContact>
+          </ContactTextField>
+          <NeyBoyHexa />
+        </ContactWrapper>
       </Element>
     </HomeContainer>
   )

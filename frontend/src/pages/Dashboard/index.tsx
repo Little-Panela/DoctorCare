@@ -5,19 +5,20 @@ import { DashboardContainer } from './styles'
 
 export function Dashboard() {
   const [agendamentos, setAgendamentos] = useState([])
-  const [reload, setReload] = useState('')
 
   useEffect(() => {
     api('/findAllPacients').then(({ data }) => {
       setAgendamentos(data)
     })
-  }, [reload])
+  }, [])
 
   async function deleteSchedule(scheduleToDelete: string) {
     try {
       await api.delete(`/deletePacient/${scheduleToDelete}`)
       alert('Agendamento deletado com sucesso')
-      setReload('reload')
+      api('/findAllPacients').then(({ data }) => {
+        setAgendamentos(data)
+      })
     } catch (err) {
       alert('erro ao deletar o agendamento!')
     }
