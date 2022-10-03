@@ -61,7 +61,11 @@ export function Home() {
           <ServicesCard />
         </ServicesWrapper>
       </Element>
+
+
+      <Element name="about">
       <AboutUsWrapper>
+      
         <DoctorSeuZupa />
         <AboutUsTextField>
           <strong>SOBRE NÓS</strong>
@@ -78,6 +82,9 @@ export function Home() {
           </p>
         </AboutUsTextField>
       </AboutUsWrapper>
+      </Element>
+    
+       <Element name="contact">
       <ContactWrapper>
         <ContactTextField>
           <strong>CONTATO</strong>
@@ -98,6 +105,7 @@ export function Home() {
         </ContactTextField>
         <NeyBoyHexa />
       </ContactWrapper>
+      </Element>
     </HomeContainer>
   )
 }
