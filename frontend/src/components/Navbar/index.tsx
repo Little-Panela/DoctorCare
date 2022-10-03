@@ -48,7 +48,6 @@ export function Navbar() {
           to="service"
           spy={true}
           smooth={true}
-          offset={60}
           onClick={changeNavBarState}>
           Serviços
           <span />
@@ -66,11 +65,11 @@ export function Navbar() {
 
         <ScroolTo
           activeClass="active"
-          to="about"
+          to="contact"
           spy={true}
           smooth={true}
           onClick={changeNavBarState}>
-          Depoimentos
+          Contato
           <span />
         </ScroolTo>
 
