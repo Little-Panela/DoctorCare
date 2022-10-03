@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { ModalContainer, Title } from './styles'
 import LoadingButton from '@mui/lab/LoadingButton'
 import { api } from '../../services/api'
+import { v4 as uuidv4 } from 'uuid'
 interface ModalProps {
   isModalOpen: boolean
   setIsModalOpen: () => void
@@ -72,6 +73,7 @@ export function CreateAppointmentModal({
 
     try {
       await api.post(`/addPacient`, {
+        id: uuidv4(),
         name: userName,
         consulta: medic,
         numero: userNumber,
