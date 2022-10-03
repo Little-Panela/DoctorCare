@@ -153,34 +153,33 @@ export const ServicesTextField = styled.div`
   }
 `
 export const AboutUsWrapper = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: ${(props) => props.theme['gray-100']};
-padding: 10rem 7.6rem;
-gap: 4.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${(props) => props.theme['gray-100']};
+  padding: 10rem 7.6rem;
+  gap: 4.1rem;
 `
-export const AboutUsTextField= styled.div`
-strong{
-  font-size: 0.87rem;
+export const AboutUsTextField = styled.div`
+  strong {
+    font-size: 0.87rem;
 
     color: ${(props) => props.theme['green-500']};
-}
+  }
 
-h1{
-  font-weight: bold;
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  max-width: 15ch;
-}
+  h1 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 15ch;
+  }
 
-p{
-  font-size: 1rem;
-  max-width: 50ch;
-
-}
+  p {
+    font-size: 1rem;
+    max-width: 50ch;
+  }
 `
-export const DoctorSeuZupa= styled.div`
+export const DoctorSeuZupa = styled.div`
   background-image: url(${medico});
   background-color: ${(props) => props.theme['gray-400']};
   background-size: cover;
@@ -194,45 +193,49 @@ export const DoctorSeuZupa= styled.div`
   }
 `
 export const ContactWrapper = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: ${(props) => props.theme['white']};
-padding: 10rem 7.6rem;
-gap: 4.1rem;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${(props) => props.theme.white};
+  padding: 10rem 7.6rem;
+  gap: 4.1rem;
 `
 export const ContactTextField = styled.div`
-display: flex;
-flex-direction: column;
-padding: 10px;
-strong{
-  font-size: 0.87rem;
-    color: ${(props) => props.theme['green-500']};
-    
-}
- div{
-  
+  display: flex;
   flex-direction: column;
-  
- }
- 
-span{
-  gap: 1.5rem;
-}
-`
+  //padding: 10px;
+  strong {
+    font-size: 0.87rem;
+    color: ${(props) => props.theme['green-500']};
+  }
+  div {
+    flex-direction: column;
+  }
 
+  span {
+    gap: 1.5rem;
+  }
+`
 
 export const ContactPic = styled.div`
+  display: flex;
+  flex-direction: column;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
+  gap: 1rem;
 
- 
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 0.5rem;
+  }
 `
 
-export const NeyBoyHexa= styled.div`
+export const NeyBoyHexa = styled.div`
   background-image: url(${brotherSorrindo});
-  background-color: ${(props) => props.theme['white']};
+  background-color: ${(props) => props.theme.white};
   background-size: cover;
 
   width: 575px;
@@ -243,5 +246,4 @@ export const NeyBoyHexa= styled.div`
     height: 340px;
   }
 `
-export const ButtonContact = styled.div`
-`
+export const ButtonContact = styled.div``
